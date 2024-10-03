@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/style.css">
-  <title>Webhook Page</title>
+  <title>Send Webhook</title>
 </head>
 <body>
-  <h2>Send Webhook</h2>
   <form action="/send-webhook" method="POST">
-    <label for="webhookUrl">Webhook URL:</label>
-    <input type="url" id="webhookUrl" name="webhookUrl" placeholder="Enter Webhook URL" required>
-
-    <label for="message">Message:</label>
+    <h2>Send Webhook</h2>
+    
+    <label for="webhookUrl">Webhook URL</label>
+    <input type="url" id="webhookUrl" name="webhookUrl" placeholder="Enter your webhook URL" required>
+    
+    <label for="message">Message</label>
     <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-
+    
     <button type="submit">Send Webhook</button>
   </form>
 </body>

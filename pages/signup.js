@@ -8,8 +8,8 @@ router.get('/signup', (req, res) => {
 
 router.post('/signup', (req, res) => {
   const { username, password } = req.body;
-  // You can implement a real sign-up logic here
-  res.send('Sign-up successful');
+  // Sign-up logic here (store user credentials in a real database)
+  res.send('Sign-up successful. Now you can login.');
 });
 
 module.exports = router;

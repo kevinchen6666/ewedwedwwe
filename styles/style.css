@@ -1,27 +1,34 @@
 /* General styles for the body */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f4f8;
+  background-color: #e9ecef; /* Light gray background */
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  color: #333;
+  color: #495057; /* Dark gray text */
 }
 
-/* General form styles */
+/* Centering the form in the viewport */
 form {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 40px;
   max-width: 400px;
   width: 90%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+}
+
+/* Form title */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff; /* Blue color for the title */
 }
 
 /* Input field styles */
@@ -31,85 +38,66 @@ input[type="url"],
 textarea {
   padding: 12px;
   font-size: 16px;
-  border: 1px solid #ddd;
+  border: 1px solid #ced4da; /* Light gray border */
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-  border-color: #007BFF;
+  border-color: #007bff; /* Blue border on focus */
 }
 
 /* Button styles */
 button {
   padding: 12px;
   font-size: 16px;
-  background-color: #007BFF;
+  background-color: #007bff; /* Blue button */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
 }
 
-/* Form title */
-h2 {
-  text-align: center;
-  margin: 0;
-  color: #333;
-}
-
-/* Textarea style */
-textarea {
-  resize: vertical;
-  height: 100px;
-}
-
-/* Label styles */
-label {
-  font-weight: bold;
-  color: #555;
-}
-
-/* Center the form */
-form {
-  margin: auto;
-}
-
-/* Success and error messages */
-.success-message,
-.error-message {
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.success-message {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-}
-
-.error-message {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-/* Responsive styles */
+/* Responsive design for smaller screens */
 @media (max-width: 600px) {
+  body {
+    padding: 20px; /* Padding for smaller screens */
+  }
+
   form {
     padding: 20px;
-    width: 90%;
+    width: 100%; /* Full width on small screens */
   }
+}
+
+/* Error message styles */
+.error-message {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  border: 1px solid #f5c6cb; /* Darker red border */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Success message styles */
+.success-message {
+  background-color: #d4edda; /* Light green background */
+  color: #155724; /* Dark green text */
+  border: 1px solid #c3e6cb; /* Darker green border */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
